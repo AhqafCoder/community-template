@@ -39,4 +39,13 @@
 
 .read-the-docs {
   color: #888;
+} 
+
+.outline-text {
+  text-shadow:
+    -2px -2px 0 black,  
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
 }
+
