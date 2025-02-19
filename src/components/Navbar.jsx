@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black fixed top-0 left-0 w-full z-50 p-4 shadow-md">
+      <nav className="bg-black fixed top-0 left-0 w-full z-50 p-4 shadow-[0_4px_10px_rgba(255,255,0,0.5)]">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="text-yellow-400 text-2xl font-bold">
@@ -22,17 +22,17 @@ const Navbar = () => {
             onClick={toggleMobileMenu}
           >
             <span
-              className={`w-6 h-0.5 bg-white transition-transform ${
+              className={`w-6 h-0.5 bg-white transition-transform duration-300 ${
                 isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
               }`}
             ></span>
             <span
-              className={`w-6 h-0.5 bg-white transition-opacity ${
+              className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${
                 isMobileMenuOpen ? "opacity-0" : ""
               }`}
             ></span>
             <span
-              className={`w-6 h-0.5 bg-white transition-transform ${
+              className={`w-6 h-0.5 bg-white transition-transform duration-300 ${
                 isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             ></span>
@@ -44,48 +44,21 @@ const Navbar = () => {
               isMobileMenuOpen ? "block" : "hidden md:flex"
             }`}
           >
+            {["Home", "Events", "About", "Team", "Contact"].map((item, index) => (
+              <li key={index}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="relative text-white block py-2 md:py-0 transition-all duration-300 ease-in-out group"
+                >
+                  <span className="relative z-10 group-hover:text-yellow-400 transition-colors duration-300">
+                    {item}
+                  </span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+              </li>
+            ))}
             <li>
-              <a
-                href="#home"
-                className="text-white hover:text-yellow-400 transition-colors block py-2 md:py-0"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#events"
-                className="text-white hover:text-yellow-400 transition-colors block py-2 md:py-0"
-              >
-                Events
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="text-white hover:text-yellow-400 transition-colors block py-2 md:py-0"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#team"
-                className="text-white hover:text-yellow-400 transition-colors block py-2 md:py-0"
-              >
-                Team
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="text-white hover:text-yellow-400 transition-colors block py-2 md:py-0"
-              >
-                Contact
-              </a>
-            </li>
-            <li>
-              <button className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors">
+              <button className="bg-yellow-400 text-black px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-black hover:text-yellow-400 border-2 border-yellow-400">
                 Join Us
               </button>
             </li>
