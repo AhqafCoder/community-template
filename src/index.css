@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+.custom-yellow {
+    color: #f4ec0b;
+  }

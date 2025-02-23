@@ -1,48 +1,33 @@
 import React from "react";
+import '../index.css';
 
 const Hero = () => {
   return (
-    <section className=" text-white py-20 p-6 bg-cover bg-center bg-[url('./assets/bg.jpg')]">
-      <div className="container mx-auto px-4 text-center">
+    <section 
+      className="text-white min-h-screen flex flex-col justify-center bg-center bg-cover bg-no-repeat bg-[url('./assets/bg3.png')]">
+      <div className="container mx-auto px-4">
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-left md:pl-8">
           Welcome to <span className="text-yellow-400">SeekhoCode</span>
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-          Are you a BTech 1st or 2nd-year student eager to learn coding but don’t
-          know where to start? You’re in the right place! SeekhoCode is a
-          beginner-friendly community where you can learn coding from scratch,
-          collaborate with peers, and build real-world projects. We provide
-          step-by-step guidance, curated resources, and mentorship to help you
-          kickstart your coding journey.
+        <p className="text-sm md:text-base mb-12 max-w-2xl text-left md:pl-8">
+          Are you a BTech 1st or 2nd-year student looking to dive into the world of coding but unsure where to begin? You’ve come to the right place! SeekhoCode is a beginner-friendly community designed to help you learn coding from the ground up. Collaborate with like-minded peers, work on real-world projects, and gain hands-on experience. With step-by-step guidance, carefully curated resources, and expert mentorship, we’re here to help you kickstart your coding journey and set you on the path to success.
         </p>
 
-        {/* Call-to-Action Buttons */}
-        <div className="flex justify-center space-x-4 mb-12">
-          <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
+        {/* Buttons Container */}
+        <div className="flex space-x-4 text-left md:pl-8">
+          {/* Button 1 */}
+          <button className="bg-[#f4ec0b] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#e0d209] hover:scale-105 transition-all duration-300">
             Join Now
           </button>
-          <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+
+          {/* Button 2 */}
+          <button className="bg-transparent border-2 border-[#f4ec0b] text-[#f4ec0b] px-6 py-2 rounded-lg font-semibold hover:bg-[#f4ec0b] hover:text-black hover:border-transparent hover:scale-105 transition-all duration-300">
             Explore Resources
           </button>
         </div>
-
-        {/* Discord Invitation */}
-        <p className="text-gray-300 text-lg">
-          Join our{" "}
-          <a
-            href="https://discord.gg/your-discord-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-400 underline hover:text-yellow-500"
-          >
-            Discord Server
-          </a>{" "}
-          to connect with fellow students, ask questions, and get support from
-          mentors.
-        </p>
       </div>
     </section>
   );
