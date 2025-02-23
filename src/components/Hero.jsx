@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-black text-white py-20">
+    <section className=" text-white py-20 p-6 bg-cover bg-center bg-[url('./assets/bg.jpg')]">
       <div className="container mx-auto px-4 text-center">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
