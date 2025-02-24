@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-left md:pl-8">
-          Welcome to <span className="text-yellow-400">SeekhoCode</span>
+          Welcome to <span className="text-[#f4ec0b]">SeekhoCode</span>
         </h1>
 
         {/* Description */}
