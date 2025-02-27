@@ -19,7 +19,7 @@ const JoinUs = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Join <span className="text-yellow-400">SeekhoCode</span> Community
+          Join <span className="text-[#f4ec0b]">SeekhoCode</span> Community
         </h1>
 
         {/* Description */}
